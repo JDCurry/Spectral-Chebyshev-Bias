@@ -1,0 +1,3 @@
+Searching for an eigenvalue in B(35.0, 0.04) with symtype -1
+# Current guess and radius: 35.0, 0.02. 0 remaining
+None found.

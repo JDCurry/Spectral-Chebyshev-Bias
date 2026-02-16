@@ -1,0 +1,5 @@
+numpy
+matplotlib
+mpmath
+# Scripts expect Sage for maass_form_coeffs; use a Sage Docker image for reproducibility
+# e.g. sagemath/sagemath:9.6

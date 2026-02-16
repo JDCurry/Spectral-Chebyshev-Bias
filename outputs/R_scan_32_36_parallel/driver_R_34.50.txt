@@ -1,0 +1,8 @@
+Searching for an eigenvalue in B(34.5, 0.04) with symtype -1
+# Current guess and radius: 34.5, 0.02. 0 remaining
+# Current guess and radius: 34.4860188505659, 0.006990574717050865. 0 remaining
+# Current guess and radius: 34.486018963740946, 5.658752412619124e-08. 0 remaining
+# 34.486018963740946 is a near candidate--- checking diffs
+# 34.486018963740946 failed check. It's not an eigenvalue.
+#   Coeff error was 11.1402
+None found.

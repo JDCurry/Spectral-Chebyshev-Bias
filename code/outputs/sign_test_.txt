@@ -1,0 +1,79 @@
+
+COMPUTING NEW ODD MAASS FORMS — PRACTICAL GUIDE
+=================================================
+
+Goal: Compute Fourier coefficients for odd Maass forms with R > 29.5
+      (beyond the LMFDB's current data) and test the spectral Chebyshev
+      bias ("21/21 law").
+
+Your setup:
+  - Lowry-Duda's heuristic_hejhal code on your server
+  - Docker image with Sage/Cython compiled (.spyx files visible)
+  - Dual CPU server
+
+Key insight: You do NOT need 5000 coefficients. Our truncation analysis
+showed the sign pattern locks in with ~200 primes. The 200th prime is
+1223, so M ≈ 1300 suffices. Even M = 500 gives ~95 usable primes.
+For a quick first test, M = 200 (45 usable primes) is enough.
+
+=== STEP 1: LOCATE EIGENVALUES ===
+
+For PSL(2,Z) odd Maass forms, the search is simplified because:
+  - We know the approximate density: spacing ≈ 12/R between consecutive 
+    odd eigenvalues at height R
+  - The LMFDB catalog (which Josh downloaded) shows even forms with 
+    index gaps — each gap is an odd form
+  - Steil (1994) and Hejhal (1991) computed all eigenvalues below R=350
+    but the data is in a poorly-OCR'd 1994 PDF
+
+For the Lowry-Duda code (singledriver.sage), the approach is:
+  1. Set symmetry to ODD (sine expansion)
+  2. Provide a search interval [R_min, R_max]  
+  3. The code scans for sign changes in the cost function C(r)
+  4. Refine each eigenvalue by secant method
+
+TARGET SEARCH WINDOWS (from Weyl law calibration + LMFDB gap analysis):
+  Odd form #22:  R ∈ [29.7, 30.3]   (first target, highest priority)
+  Odd form #23:  R ∈ [30.1, 30.8]
+  Odd form #24:  R ∈ [30.5, 31.2]
+  Odd form #25:  R ∈ [30.9, 31.5]
+  Odd form #26:  R ∈ [31.3, 31.9]
+  Odd form #27:  R ∈ [31.7, 32.3]
+  Odd form #28:  R ∈ [32.0, 32.7]
+  Odd form #29:  R ∈ [32.4, 33.0]
+  Odd form #30:  R ∈ [32.8, 33.4]
+
+Note: These windows overlap because actual spacing is somewhat random 
+(Poisson-distributed). The code should scan each window with step ≈ 0.01.
+
+IMPORTANT: The even forms we know in this range are at:
+  R = 31.5266, 31.5663, 32.5081, 32.8912
+The odd forms should interleave between these.
+
+=== STEP 2: EXTRACT COEFFICIENTS ===
+
+Once an eigenvalue R is found, the code computes Fourier coefficients.
+For ODD forms on PSL(2,Z):
+
+  f(z) = sum_{n=1}^{M} a_n * sqrt(y) * K_{iR}(2*pi*n*y) * sin(2*pi*n*x)
+
+We need a_n for n = 1, ..., M where M >= 500 (ideally 1300+).
+
+The singledriver.sage code parameters to set:
+  - level = 1
+  - weight = 0  
+  - character = trivial
+  - symmetry = -1 (odd)
+  - M0 = 500 (or 1300 for full test)
+  - Y = optimal height (code chooses this)
+  - precision = 53 digits is fine for our purposes
+
+=== STEP 3: IMMEDIATE SIGN TEST ===
+
+After each form, run this test:
+
+
+Usage:
+  python sign_test_new_forms.py <coefficient_file> [R_value]
+
+Supports BSV format (C[n]=value;) or one-per-line format.

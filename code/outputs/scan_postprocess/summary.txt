@@ -1,0 +1,40 @@
+R=32.018406433625 Y=0.020 M=562 hecke_err=4.056e-12 coeff_err=1.228e-10 coeffile=outputs/scan_postprocess/R_32.018406433625/coeffs_R_32.018406433625_Y_0.020.txt
+  X=500: S_f=-2.651531
+  X=1000: S_f=-4.635533
+  X=2000: S_f=-6.052290
+  X=5000: S_f=-7.078645
+R=32.018406433625 Y=0.010 M=1120 hecke_err=1.071e-10 coeff_err=1.228e-10 coeffile=outputs/scan_postprocess/R_32.018406433625/coeffs_R_32.018406433625_Y_0.010.txt
+  X=500: S_f=-3.532503
+  X=1000: S_f=-7.671567
+  X=2000: S_f=-11.405928
+  X=5000: S_f=-14.527243
+R=33.492331282392 Y=0.020 M=579 hecke_err=1.815e-12 coeff_err=4.508e-11 coeffile=outputs/scan_postprocess/R_33.492331282392/coeffs_R_33.492331282392_Y_0.020.txt
+  X=500: S_f=-2.607303
+  X=1000: S_f=-2.022798
+  X=2000: S_f=-1.512881
+  X=5000: S_f=-1.113381
+R=33.492331282392 Y=0.010 M=1153 hecke_err=2.050e-12 coeff_err=4.508e-11 coeffile=outputs/scan_postprocess/R_33.492331282392/coeffs_R_33.492331282392_Y_0.010.txt
+  X=500: S_f=-4.476690
+  X=1000: S_f=-6.193398
+  X=2000: S_f=-7.808928
+  X=5000: S_f=-9.199125
+R=34.185969933076 Y=0.020 M=586 hecke_err=2.512e-10 coeff_err=1.395e-09 coeffile=outputs/scan_postprocess/R_34.185969933076/coeffs_R_34.185969933076_Y_0.020.txt
+  X=500: S_f=-1.294412
+  X=1000: S_f=-0.909909
+  X=2000: S_f=-0.729249
+  X=5000: S_f=-0.625757
+R=34.185969933076 Y=0.010 M=1168 hecke_err=3.566e-10 coeff_err=1.395e-09 coeffile=outputs/scan_postprocess/R_34.185969933076/coeffs_R_34.185969933076_Y_0.010.txt
+  X=500: S_f=-1.181807
+  X=1000: S_f=-0.986784
+  X=2000: S_f=-1.293793
+  X=5000: S_f=-1.783444
+R=34.695310409763 Y=0.020 M=592 hecke_err=5.332e-13 coeff_err=1.949e-11 coeffile=outputs/scan_postprocess/R_34.695310409763/coeffs_R_34.695310409763_Y_0.020.txt
+  X=500: S_f=-4.756955
+  X=1000: S_f=-6.872145
+  X=2000: S_f=-8.154972
+  X=5000: S_f=-9.004669
+R=34.695310409763 Y=0.010 M=1180 hecke_err=6.275e-12 coeff_err=1.949e-11 coeffile=outputs/scan_postprocess/R_34.695310409763/coeffs_R_34.695310409763_Y_0.010.txt
+  X=500: S_f=-6.245929
+  X=1000: S_f=-10.187323
+  X=2000: S_f=-13.098652
+  X=5000: S_f=-15.284214

@@ -1,0 +1,20 @@
+sage -c "from sage.misc.cython import cython; cython('lpkbessel.spyx', compile_message=True, use_cache=False, create_local_so_file=True)"
+Compiling lpkbessel.spyx...
+/usr/lib/python3/dist-packages/pythran/tables.py:4553: FutureWarning: In the future `np.bytes` will be defined as the corresponding NumPy scalar.
+  obj = getattr(themodule, elem)
+sage -c "from sage.misc.cython import cython; cython('maass_levelone_computations.spyx', compile_message=True, use_cache=False, create_local_so_file=True)"
+Compiling maass_levelone_computations.spyx...
+/usr/lib/python3/dist-packages/pythran/tables.py:4553: FutureWarning: In the future `np.bytes` will be defined as the corresponding NumPy scalar.
+  obj = getattr(themodule, elem)
+sage -c "from sage.misc.cython import cython; cython('maass_levelone_computations_tests.spyx', compile_message=True, use_cache=False, create_local_so_file=True)"
+Compiling maass_levelone_computations_tests.spyx...
+/usr/lib/python3/dist-packages/pythran/tables.py:4553: FutureWarning: In the future `np.bytes` will be defined as the corresponding NumPy scalar.
+  obj = getattr(themodule, elem)
+sage -c "from sage.misc.cython import cython; cython('maass_sqfreelevel_computations.spyx', compile_message=True, use_cache=False, create_local_so_file=True)"
+Compiling maass_sqfreelevel_computations.spyx...
+/usr/lib/python3/dist-packages/pythran/tables.py:4553: FutureWarning: In the future `np.bytes` will be defined as the corresponding NumPy scalar.
+  obj = getattr(themodule, elem)
+sage -c "from sage.misc.cython import cython; cython('maass_sqfreelevel_tests.spyx', compile_message=True, use_cache=False, create_local_so_file=True)"
+Compiling maass_sqfreelevel_tests.spyx...
+/usr/lib/python3/dist-packages/pythran/tables.py:4553: FutureWarning: In the future `np.bytes` will be defined as the corresponding NumPy scalar.
+  obj = getattr(themodule, elem)
