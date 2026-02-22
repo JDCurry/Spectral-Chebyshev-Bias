@@ -18,4 +18,4 @@ Files of interest:
 - `sign_tests_scan_forms.csv` — sign-test results for scan forms
 - `L_derivatives_refined.csv` — refined L' results for scan forms
 
-License: please add your preferred license before publishing.
+
